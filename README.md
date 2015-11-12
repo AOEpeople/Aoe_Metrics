@@ -1,5 +1,7 @@
 # Aoe_Metrics (for AWS CloudWatch)
 
+This module offers a simple way to gather custom metrics (e.g. number of order by status and store) and send them to a collector backend (e.g. AWS CloudWatch).
+
 Author: [Fabrizio Branca](https://twitter.com/fbrnc)
 
 This is a first prototype. Simplicity was a priority.
@@ -17,6 +19,8 @@ Metrics will be collected in a cron job (which is also called `aoemetrics_collec
 Also, currently there's no interface to select which metrics are being collected and to pass any configuration to the metrics.
 You need to handle this inside your metric implementation. 
 
+### Example Metric Implementation
+
 Look at `Aoe_Metrics_Model_Metric_OrderStateCount` for an example.
 
 ### Configuration
@@ -27,6 +31,7 @@ See `System > Configuration > System > AOE Metrics`
 
 * Order count by state (implemented)
 * Order count by status (might result in a lot of data)
+* Placed Orders/Min
 * EE Indexer Queue sizes - processed, unprocessed (should go into https://github.com/AOEpeople/Aoe_EeIndexerStats)
 * Aoe_Queue stats (should go into https://github.com/AOEpeople/Aoe_Queue)
 * Aoe_Scheduler stats (failed jobs, delay between scheduled_at and executed_at) (should go into https://github.com/AOEpeople/Aoe_Scheduler)

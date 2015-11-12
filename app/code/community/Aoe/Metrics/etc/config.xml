@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+    <modules>
+        <Aoe_Metrics>
+            <version>1.0.0</version>
+        </Aoe_Metrics>
+    </modules>
+
+    <global>
+
+        <models>
+            <Aoe_Metrics>
+                <class>Aoe_Metrics_Model</class>
+            </Aoe_Metrics>
+        </models>
+
+        <helpers>
+            <Aoe_Metrics>
+                <class>Aoe_Metrics_Helper</class>
+            </Aoe_Metrics>
+        </helpers>
+
+
+        <events>
+            <aoemetrics_collect>
+                <observers>
+                    <order_statee_count>
+                        <type>singleton</type>
+                        <class>Aoe_Metrics/Metric_OrderStateCount</class>
+                        <method>collect</method>
+                    </order_statee_count>
+                </observers>
+            </aoemetrics_collect>
+        </events>
+
+    </global>
+
+    <crontab>
+        <jobs>
+            <aoemetrics_collect>
+                <run><model>Aoe_Metrics/Cron::collect</model></run>
+            </aoemetrics_collect>
+        </jobs>
+    </crontab>
+
+    <default>
+        <system>
+            <aoemetrics>
+                <cloudwatch_namespace><![CDATA[Magento]]></cloudwatch_namespace>
+                <cloudwatch_default_dimensions><![CDATA[Project=MagentoProject,Environment=dev]]></cloudwatch_default_dimensions>
+                <cloudwatch_awscli_path><![CDATA[/usr/local/bin/aws]]></cloudwatch_awscli_path>
+            </aoemetrics>
+        </system>
+    </default>
+
+</config>

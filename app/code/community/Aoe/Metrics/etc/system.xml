@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <system>
+            <groups>
+                <aoemetrics translate="label">
+                    <label>AOE Metrics</label>
+                    <!--<comment></comment>-->
+                    <frontend_type>text</frontend_type>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <cloudwatch_namespace>
+                            <label>CloudWatch Namespace</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cloudwatch_namespace>
+                        <cloudwatch_default_dimensions>
+                            <label>CloudWatch Default Dimensions</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cloudwatch_default_dimensions>
+                        <cloudwatch_awscli_path>
+                            <label>AWS CLI Path</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cloudwatch_awscli_path>
+                        <cloudwatch_awscli_profile>
+                            <label>AWS CLI Profile</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cloudwatch_awscli_profile>
+                    </fields>
+                </aoemetrics>
+            </groups>
+        </system>
+    </sections>
+</config>

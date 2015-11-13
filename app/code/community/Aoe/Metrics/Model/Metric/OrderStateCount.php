@@ -1,6 +1,6 @@
 <?php
 
-class Aoe_Metrics_Model_Metric_OrderStateCount
+class Aoe_Metrics_Model_Metric_OrderStateCount implements Aoe_Metrics_Model_MetricInterface
 {
 
     public function collect(Varien_Event_Observer $observer)
@@ -21,6 +21,8 @@ class Aoe_Metrics_Model_Metric_OrderStateCount
                 'State' => $result['state'],
             ));
         }
+        
+        return $this;
     }
 
 }

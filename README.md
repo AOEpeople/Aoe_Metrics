@@ -29,9 +29,14 @@ See `System > Configuration > System > AOE Metrics`
 
 ### Ideas for metrics
 
-* Order count by state (implemented)
-* Order count by status (might result in a lot of data)
-* Placed Orders/Min
+* Order count grouped by state (implemented)
+* Order count grouped by status (might result in a lot of data)
+* New/Updated Quote Items (Count)
+* New/Updated Quotes (Count)
+* Quote: Number of items
+* Quote: Value
+* Invoices, Creditmemos, Shipments, Payments
+* Orderstatus updates
 * EE Indexer Queue sizes - processed, unprocessed (should go into https://github.com/AOEpeople/Aoe_EeIndexerStats)
 * Aoe_Queue stats (should go into https://github.com/AOEpeople/Aoe_Queue)
 * Aoe_Scheduler stats (failed jobs, delay between scheduled_at and executed_at) (should go into https://github.com/AOEpeople/Aoe_Scheduler)
